@@ -11,6 +11,6 @@ BOT_TOKEN=os.getenv("BOT_TOKEN")
 EMPERORS = list(map(int, os.getenv("EMPERORS", "").split(",")))
 MONGO_URI=os.getenv("MONGO_URI")
 
-tv=Client("tv_joiner",api_id=API_ID,api_hash=API_HASH,bot_token=BOT_TOKEN)
+tv = Client("tv_joiner",api_id=API_ID,api_hash=API_HASH,bot_token=BOT_TOKEN)
 logger.info(EMPERORS)
 client_mongo = MongoClient(MONGO_URI)
