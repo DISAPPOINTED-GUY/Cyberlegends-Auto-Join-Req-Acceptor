@@ -1,10 +1,12 @@
 try:
-    from tv.plugins.start import *
+    from Tv.plugins.start import *
     logger.info("Plugins imported Succesfully")
 except Exception as e:
     logger.info(f"Error while importing plugins : {e}")
-
+    exit(1)
+from .Tv import tv
 from pyrogram import filters
+
 
 @tv.on_message(filters.command("start"))
 async def handle_start_command(tv, message):
