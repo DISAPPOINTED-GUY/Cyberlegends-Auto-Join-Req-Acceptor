@@ -4,7 +4,7 @@ try:
 except Exception as e:
     logger.info(f"Error while importing plugins : {e}")
     exit(1)
-from .Tv import tv
+from .Tv import tv , logger
 from pyrogram import filters
 
 
